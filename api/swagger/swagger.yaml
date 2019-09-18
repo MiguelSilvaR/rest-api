@@ -3,7 +3,8 @@ info:
   version: "0.0.1"
   title: Hello World App
 # during dev, should point to your local machine
-host: avian-pact-252618.appspot.com
+# host: localhost:10010
+host: dependable-aloe-245421.appspot.com
 # basePath prefixes all resource paths 
 basePath: /
 # 
@@ -186,64 +187,64 @@ paths:
   #         schema:
   #           $ref: "#/definitions/ErrorResponse"
   # /videogames/{id}:
-    x-swagger-router-controller: game.controller
-    get:
-      description: get a videogmae
-      parameters:
-        - name: id
-          type: string
-          in: path
-          required: true
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/GetVideoGameResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
-    put:
-      description: update a video game
-      # define the parameters
-      parameters:
-        - name: id
-          description: videogame id
-          type: string
-          in: path
-          required: true
-        - in: body
-          name: videogame
-          description: The videogame to update.
-          schema:
-            $ref: "#/definitions/VideoGame"
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/GetVideoGameResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"  
-    delete:
-      description: delete a videogame
-      # define the parameters
-      parameters:
-        - name: id
-          description: videogame id
-          type: string
-          in: path
-          required: true
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/GeneralResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
+  #   x-swagger-router-controller: game.controller
+  #   get:
+  #     description: get a videogmae
+  #     parameters:
+  #       - name: id
+  #         type: string
+  #         in: path
+  #         required: true
+  #     responses:
+  #       "200":
+  #         description: Success
+  #         schema:
+  #           $ref: "#/definitions/GetVideoGameResponse"
+  #       default:
+  #         description: Error
+  #         schema:
+  #           $ref: "#/definitions/ErrorResponse"
+  #   put:
+  #     description: update a video game
+  #     # define the parameters
+  #     parameters:
+  #       - name: id
+  #         description: videogame id
+  #         type: string
+  #         in: path
+  #         required: true
+  #       - in: body
+  #         name: videogame
+  #         description: The videogame to update.
+  #         schema:
+  #           $ref: "#/definitions/VideoGame"
+  #     responses:
+  #       "200":
+  #         description: Success
+  #         schema:
+  #           $ref: "#/definitions/GetVideoGameResponse"
+  #       default:
+  #         description: Error
+  #         schema:
+  #           $ref: "#/definitions/ErrorResponse"  
+  #   delete:
+  #     description: delete a videogame
+  #     # define the parameters
+  #     parameters:
+  #       - name: id
+  #         description: videogame id
+  #         type: string
+  #         in: path
+  #         required: true
+  #     responses:
+  #       "200":
+  #         description: Success
+  #         schema:
+  #           $ref: "#/definitions/GeneralResponse"
+  #       default:
+  #         description: Error
+  #         schema:
+  #           $ref: "#/definitions/ErrorResponse"
   
   /swagger:
     x-swagger-pipe: swagger_raw
@@ -378,10 +379,10 @@ definitions:
   #     - genre
   #     - year
   # GetVideoGameListResponse:
-    required:
-      - videogames
-    properties:
-      videogames:
-        type: array
-        items:
-          $ref: "#/definitions/GetVideoGameResponse"
+  #   required:
+  #     - videogames
+  #   properties:
+  #     videogames:
+  #       type: array
+  #       items:
+  #         $ref: "#/definitions/GetVideoGameResponse"
