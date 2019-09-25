@@ -6,7 +6,7 @@ info:
 # host: localhost:10010
 host: avian-pact-252618.appspot.com
 x-google-endpoints:
-- name: 'avian-pact-252618.appspot.com'
+  - name: 'avian-pact-252618.appspot.com'
 allowCors: 'true'
 # basePath prefixes all resource paths 
 basePath: /
